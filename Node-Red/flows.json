@@ -1,0 +1,746 @@
+[
+    {
+        "id": "7be84404bbc6d5dd",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a266155a6759cc1b",
+        "type": "s7 in",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "mode": "single",
+        "variable": "Auto/Manual out",
+        "diff": true,
+        "name": "Auto/Manual",
+        "x": 70,
+        "y": 120,
+        "wires": [
+            [
+                "939de0c69158f57f",
+                "97319e53690f5a97",
+                "ef76d0e305c415cc"
+            ]
+        ]
+    },
+    {
+        "id": "939de0c69158f57f",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8a09854f9eb665db",
+        "type": "comment",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "info": "",
+        "x": 220,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "804a6d0fdba82e1d",
+        "type": "comment",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "info": "",
+        "x": 700,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8376d6e43fce4fa4",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "97319e53690f5a97",
+        "type": "mqtt out",
+        "z": "7be84404bbc6d5dd",
+        "name": "indicador_adafruit",
+        "topic": "juano_967Vito/f/auto-slash-manual",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "18c91a76868953e6",
+        "x": 390,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a6e9c1bbe6ead698",
+        "type": "mqtt out",
+        "z": "7be84404bbc6d5dd",
+        "name": "tempe_ADAFRUIT",
+        "topic": "juano_967Vito/f/temperatura",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "18c91a76868953e6",
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "450129917862e757",
+        "type": "comment",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "info": "",
+        "x": 220,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "831f778ecb3803a5",
+        "type": "s7 in",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "mode": "single",
+        "variable": "Temperatura out",
+        "diff": true,
+        "name": "Temperatura",
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "8376d6e43fce4fa4",
+                "a6e9c1bbe6ead698",
+                "a474dcda469dffae",
+                "c6d61f97f518bbd7"
+            ]
+        ]
+    },
+    {
+        "id": "29de418e3ccc067c",
+        "type": "s7 in",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "mode": "single",
+        "variable": "Cierre Manual out",
+        "diff": true,
+        "name": "Cierre Manual",
+        "x": 70,
+        "y": 280,
+        "wires": [
+            [
+                "b7ab936ae98f6e28",
+                "edd19e76b3fe9cab"
+            ]
+        ]
+    },
+    {
+        "id": "b7ab936ae98f6e28",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "edd19e76b3fe9cab",
+        "type": "mqtt out",
+        "z": "7be84404bbc6d5dd",
+        "name": "indicador_adafruit",
+        "topic": "juano_967Vito/f/cerrando-compuerta",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "18c91a76868953e6",
+        "x": 390,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "af7cb6f91ec2e2b4",
+        "type": "s7 in",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "mode": "single",
+        "variable": "Apertura Manual out",
+        "diff": true,
+        "name": "Apertura Manual",
+        "x": 80,
+        "y": 460,
+        "wires": [
+            [
+                "2ac26be53c74795d",
+                "fc945679e717e091"
+            ]
+        ]
+    },
+    {
+        "id": "2ac26be53c74795d",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "fc945679e717e091",
+        "type": "mqtt out",
+        "z": "7be84404bbc6d5dd",
+        "name": "indicador_adafruit",
+        "topic": "juano_967Vito/f/Abriendo-compuerta",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "18c91a76868953e6",
+        "x": 390,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c4761d0237afb10b",
+        "type": "mqtt in",
+        "z": "7be84404bbc6d5dd",
+        "name": "Abre_Compuerta manual",
+        "topic": "juano_967Vito/f/Abre_Compuerta",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "18c91a76868953e6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 589,
+        "y": 320,
+        "wires": [
+            [
+                "d788e1a3dda9d47a",
+                "fceb24c052f2382b"
+            ]
+        ]
+    },
+    {
+        "id": "fceb24c052f2382b",
+        "type": "s7 out",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "variable": "ABRE COMPUERTA In",
+        "name": "ESCRIBIR EN LOGO",
+        "x": 800,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d788e1a3dda9d47a",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "675900848fdbc5b1",
+        "type": "mqtt in",
+        "z": "7be84404bbc6d5dd",
+        "name": "cierra_Compuerta manual",
+        "topic": "juano_967Vito/f/cierra-compuerta",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "18c91a76868953e6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 630,
+        "y": 480,
+        "wires": [
+            [
+                "c7015199576b8012",
+                "094fbac012515121"
+            ]
+        ]
+    },
+    {
+        "id": "094fbac012515121",
+        "type": "s7 out",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "variable": "Cierre Manual In",
+        "name": "Cierre Manual",
+        "x": 800,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c7015199576b8012",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "fb7fde63f00c8dd2",
+        "type": "mqtt in",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "topic": "juano_967Vito/f/auto-slash-manual",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "18c91a76868953e6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 720,
+        "wires": [
+            [
+                "3ca91d964171059e",
+                "5a33a2f335e9f44c"
+            ]
+        ]
+    },
+    {
+        "id": "3ca91d964171059e",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5a33a2f335e9f44c",
+        "type": "s7 out",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "variable": "Auto/Manual In",
+        "name": "Auto/manual",
+        "x": 350,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "715499a54b29be35",
+        "type": "function",
+        "z": "7be84404bbc6d5dd",
+        "name": "function 1",
+        "func": "// Obtener temperatura\nlet temperatura = msg.payload;\n\n// Crear fecha actual\nlet ahora = new Date();\nlet fechaStr = ahora.toLocaleDateString('es-AR');\nlet horaStr = ahora.toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });\n\n// Verificar si ya se escribió encabezado\nlet encabezadoEscrito = flow.get(\"encabezadoEscrito\") || false;\n\nlet lineaCSV = \"\";\n\n// Si no se escribió el encabezado, lo agregamos\nif (!encabezadoEscrito) {\n    lineaCSV += \"Fecha,Hora,Temperatura\\n\";\n    flow.set(\"encabezadoEscrito\", true);\n}\n\n// Agregamos línea de datos\nlineaCSV += fechaStr + \",\" + horaStr + \",\" + temperatura + \"\\n\";\n\nmsg.payload = lineaCSV;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 60,
+        "wires": [
+            [
+                "cdb5f263dedec42e"
+            ]
+        ]
+    },
+    {
+        "id": "cdb5f263dedec42e",
+        "type": "file",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "filename": "C:\\Users\\usuario\\Documents\\Automatizacion y robotica\\segundo año\\Segundo cuatrimestre\\Proyecto final\\Temperatura.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1480,
+        "y": 40,
+        "wires": [
+            [
+                "42f35c2d4cc11aa0",
+                "9910e5ca3a9ccdbd"
+            ]
+        ]
+    },
+    {
+        "id": "42f35c2d4cc11aa0",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a474dcda469dffae",
+        "type": "delay",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 80,
+        "wires": [
+            [
+                "715499a54b29be35"
+            ]
+        ]
+    },
+    {
+        "id": "ef76d0e305c415cc",
+        "type": "ui_button",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "group": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9910e5ca3a9ccdbd",
+        "type": "ui_date_picker",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "label": "date",
+        "group": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1890,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6d61f97f518bbd7",
+        "type": "ui_gauge",
+        "z": "7be84404bbc6d5dd",
+        "name": "",
+        "group": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 890,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8c904b0e96b2943b",
+        "type": "s7 in",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "mode": "single",
+        "variable": "LIMITE SUPERIOR(APERTURA)",
+        "diff": true,
+        "name": "TOPE APERTURA",
+        "x": 550,
+        "y": 700,
+        "wires": [
+            [
+                "211f27f975144ef1",
+                "743d2a9a37db0705"
+            ]
+        ]
+    },
+    {
+        "id": "3f34e4da1f020830",
+        "type": "s7 in",
+        "z": "7be84404bbc6d5dd",
+        "endpoint": "eb4013df540b9456",
+        "mode": "single",
+        "variable": "LIMITE INFERIOR(CIERRE)",
+        "diff": true,
+        "name": "TOPE CIERRE",
+        "x": 580,
+        "y": 860,
+        "wires": [
+            [
+                "09c8dbc8b29daf7d",
+                "3612720e47886aa6"
+            ]
+        ]
+    },
+    {
+        "id": "211f27f975144ef1",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "09c8dbc8b29daf7d",
+        "type": "debug",
+        "z": "7be84404bbc6d5dd",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "3612720e47886aa6",
+        "type": "mqtt out",
+        "z": "7be84404bbc6d5dd",
+        "name": "tope-cierre",
+        "topic": "juano_967Vito/f/tope-cierre",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "18c91a76868953e6",
+        "x": 850,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "743d2a9a37db0705",
+        "type": "mqtt out",
+        "z": "7be84404bbc6d5dd",
+        "name": "tope-apertura",
+        "topic": "juano_967Vito/f/tope-apertura",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "18c91a76868953e6",
+        "x": 820,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "eb4013df540b9456",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.0.50",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": "2",
+        "cycletime": "1000",
+        "timeout": "2000",
+        "name": "Logo2",
+        "vartable": [
+            {
+                "addr": "DB1,X0.0",
+                "name": "Auto/Manual In"
+            },
+            {
+                "addr": "DB1,X0.3",
+                "name": "Cierre Manual out"
+            },
+            {
+                "addr": "DB1,X1.4",
+                "name": "Apertura Manual out"
+            },
+            {
+                "addr": "DB1,WORD10",
+                "name": "Temperatura out"
+            },
+            {
+                "addr": "DB1,X0.2",
+                "name": "ABRE COMPUERTA In"
+            },
+            {
+                "addr": "DB1,X0.7",
+                "name": "Auto/Manual out"
+            },
+            {
+                "addr": "DB1,X0.1",
+                "name": "Cierre Manual In"
+            },
+            {
+                "addr": "DB1,X1.0",
+                "name": "LIMITE SUPERIOR(APERTURA)"
+            },
+            {
+                "addr": "DB1,X1.2",
+                "name": "LIMITE INFERIOR(CIERRE)"
+            }
+        ]
+    },
+    {
+        "id": "18c91a76868953e6",
+        "type": "mqtt-broker",
+        "name": "ADAFRUIT",
+        "broker": "https://io.adafruit.com/",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
